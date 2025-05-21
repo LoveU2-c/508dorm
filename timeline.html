@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>时间轴 - 508宿舍</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 时间轴样式 */
+    .timeline {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 20px;
+      border-left: 4px solid #0ff;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(#0ff, #f0f);
+      animation: move 3s linear infinite;
+    }
+
+    @keyframes move {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 0 100%;
+      }
+    }
+
+    .event {
+      margin: 30px 0;
+      padding-left: 20px;
+      color: #fff;
+      font-size: 18px;
+      border-left: 2px solid #fff3;
+      position: relative;
+    }
+
+    .event::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      background: #0ff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000, #111);
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+  <nav class="navbar">
+    <a href="index.html">首页</a>
+    <a href="members.html">成员</a>
+    <a href="timeline.html">时间轴</a>
+    <a href="#">活动</a>
+    <a href="#">广场</a>
+  </nav>
+
+  <div class="timeline">
+    <div class="event">2023.9.10 508首次成立</div>
+    <div class="event">2023.9.14-9.28 军训</div>
+    <div class="event">2023.10.13 508首次尝试进入后室</div>
+    <div class="event">2023.11.10 融创乐园</div>
+    <div class="event">2023.11.19 小猫旺仔的救赎</div>
+    <div class="event">2024.7.3 融创水世界</div>
+    <div class="event">2024.11.15 芜湖方特乐园</div>
+    <div class="event">2024.12.10 曹子杨夜袭合肥滨湖医院</div>
+    <div class="event">2025.3.7 金陵</div>
+    <div class="event">2025.3.18 Vlog</div>
+    <div class="event">2025.4.4 方块人大电影</div>
+    <div class="event">2025.4.10 停电</div>
+    <div class="event">2025.4.27 长沙</div>
+  </div>
+</body>
+</html>
