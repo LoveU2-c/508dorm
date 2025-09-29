@@ -21,26 +21,40 @@
 
   <!-- 主要内容区域 -->
   <main class="center-text">
-    <h1 class="cyber-text">欢迎来到广场</h1>
-    <p class="sub-text">在这里留言、发帖、互动！</p>
+    <h1 class="cyber-text">广场 · 时间线</h1>
+    <p class="sub-text">像微博一样，发表动态，大家都能看到</p>
 
-    <section class="comments-section">
-      <h2>留言广场</h2>
-      <form id="comment-form">
-      <input type="text" id="name" placeholder="你的名字" required />
-      <textarea id="message" placeholder="写下你的留言..." required></textarea>
-      <button type="submit">发表</button>
+    <!-- 发帖框（微博风格） -->
+    <section class="composer">
+      <div class="composer-head">
+        <img class="avatar" src="images/zhaochenle.webp" alt="avatar">
+        <input id="postAuthor" placeholder="你的昵称（必填）" />
+      </div>
+      <textarea id="postContent" rows="3" placeholder="此刻想说点什么...（必填）"></textarea>
+
+      <!-- ① 可选：上传配图（先上传拿到图片URL） -->
+      <form id="postUploadForm" enctype="multipart/form-data" class="upload-inline">
+        <input type="file" name="photo" accept="image/*">
+        <input type="hidden" name="username" value="匿名">
+        <button type="submit" class="btn">上传图片</button>
+        <span id="postImageUrl" class="hint"></span>
       </form>
-      <div id="comments-list"></div>
+
+      <!-- ② 发表动态（把 image_url 一并提交） -->
+      <button id="postSubmit" class="btn primary">发表</button>
     </section>
 
+    <!-- 时间线 -->
+    <section class="feed" id="weiboFeed"></section>
+    <button id="loadMore" class="load-more">加载更多</button>
 
-    <!-- 帖子列表 -->
-    <div id="posts-container">
-      <!-- 这里将由脚本动态填充帖子 -->
-    </div>
   </main>
 
+  <!-- 可选：在这里指定后端地址（上线后改成你的 Render 域名） -->
+  <!-- <script>window.API_BASE_URL="https://你的-render服务.onrender.com";</script> -->
+
+  <!-- API glue：留言/相册复用；时间线在 square.js 中 -->
+  <script src="api.js"></script>
   <script src="square.js"></script>
 </body>
 </html>
