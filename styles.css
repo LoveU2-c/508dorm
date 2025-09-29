@@ -139,3 +139,54 @@ body, html, h1, h2, h3, h4, h5, h6, p, a, span, button, div {
   font-size: 18px;
 }
 
+.comments-section {
+  width: 80%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #0ff;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+
+.comments-section h2 {
+  color: #0ff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#comment-form input,
+#comment-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  resize: none;
+  font-size: 16px;
+}
+
+#comment-form button {
+  padding: 10px;
+  background: #0ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+}
+
+#comments-list {
+  margin-top: 30px;
+}
+.comment {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>赛博508 - 广场</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 动态背景层 -->
+  <div class="gradient-bg"></div>
+
+  <!-- 顶部导航栏 -->
+  <nav class="navbar">
+    <a href="index.html">首页</a>
+    <a href="members.html">成员</a>
+    <a href="timeline.html">时间轴</a>
+    <a href="events.html">活动</a>
+    <a href="square.html">广场</a>
+  </nav>
+
+  <!-- 主要内容区域 -->
+  <main class="center-text">
+    <h1 class="cyber-text">欢迎来到广场</h1>
+    <p class="sub-text">在这里留言、发帖、互动！</p>
+
+    <section class="comments-section">
+      <h2>留言广场</h2>
+      <form id="comment-form">
+      <input type="text" id="name" placeholder="你的名字" required />
+      <textarea id="message" placeholder="写下你的留言..." required></textarea>
+      <button type="submit">发表</button>
+      </form>
+      <div id="comments-list"></div>
+    </section>
+
+
+    <!-- 帖子列表 -->
+    <div id="posts-container">
+      <!-- 这里将由脚本动态填充帖子 -->
+    </div>
+  </main>
+
+  <script src="square.js"></script>
+</body>
+</html>

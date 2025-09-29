@@ -1,0 +1,9 @@
+name = "page-comments-worker" # 你的 Worker 名称
+main = "worker.js" # 你的 Worker 入口文件路径
+compatibility_date = "2025-05-30" 
+
+
+[[kv_namespaces]]
+binding = "page-comments"  # 这个名字将在你的 Worker 代码中作为全局变量来访问 KV
+id = "ae5f5d3c744546edb2dccef09ac04ada" 
+preview_id = "0b4e2405c9fb4be18a3447cb732438f8" 
